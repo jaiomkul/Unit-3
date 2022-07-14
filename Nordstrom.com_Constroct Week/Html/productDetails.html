@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <title>Document</title>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+        }
+        #containerPro{
+            margin: 20px;
+            /* border: 3px solid rgb(17, 11, 11); */
+            display: flex;
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+        }
+
+        #rate{
+            width: 550px;
+            height: 550px;
+            margin: auto;
+
+        }
+
+        #image{
+            /* border: 3px solid black; */
+            margin: auto;
+            padding-left: 30px;
+            flex:1;
+
+        }
+        #one{
+            /* border: 3px solid black; */
+            flex: 1;
+            margin-left: 70px;
+            align-items:flex-end;
+            /* margin: auto; */
+        }
+        #brand{
+            font-size:25px
+        }
+        #para, #para1, #price{
+            font-size: 17px;
+        }
+        #two{
+            /* border: 3px solid black; */
+            margin: auto;
+        }
+        .x_input[type=text], [type=number] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            }
+
+            #button2{
+                padding: 13px;
+                width: 100%;
+                background-color:black;
+                color: white;
+
+            }
+            #five_imgs img{
+                border-radius: 50%;
+            }
+
+
+    </style>
+</head>
+<body>
+
+     
+  <div id="navbar">
+    <!-- black line = done  -->
+    <div id="international_shipping">
+       
+        <p id="international_para">
+            <strong>
+                Shipping outside of the U.S. or Canada?
+
+                <a inter_shipping_link href="https://www.nordstrom.com/browse/customer-service/international-orders?jid=j011535-13614&cid=00000&cm_sp=merch-_-multi-div_13614_j011535-_-swptcos_corp_persnav_info&#anchor-link-shipping-charges">Learn bout International Shipping</a>
+
+            </strong>
+
+            <button id="img_austria">
+                <img
+                    id="austria_img"
+                 src="https://n.nordstrommedia.com/alias/AU.gif" alt="">
+
+                <p>
+                    <strong id="img_austria">Australia</strong>
+                </p>
+            </button>
+
+        </p>
+
+    </div>
+    
+      <!-- second line nord =  -->
+  <div id="nordstorm_searchbar">
+
+
+    <div id="nordstorm">
+        <a href="home.html">
+            <img 
+            id="nord_img"
+        src="https://n.nordstrommedia.com/alias/nordstrom-logo.svg" alt="">
+        </a>
+    </div>
+
+    <div id="bar_rightsider">
+       
+        <ul  class="main-menu">
+        <li>Search
+            <ul class="sub-menu">
+                 <input placeholder="Search" id="query">
+            </ul>  
+        </li>
+        <!-- <a href="login.html">Login</a> -->
+               
+       
+        <li>Sign In
+            <ul class="sub-menu">
+                <li id="l1"><a href="signin.html">Sign In | Create Account</a></li>
+                <li><a href="signin.html">Your account</a></li>
+                <li><a href="">The Nordy Club Reward</a></li>
+                <li><a href="Checkout.html">Shipping Adresses</a></li>
+                <li><a href="payment.html">Payment Method</a></li>
+                <li><a href="women.html">Looks</a></li>
+                <li><a href="Checkout.html">Pay & Manage Nordstrom Card</a></li>
+                <li><a href="signin.html">Account Setting</a></li>
+                <li><a href="signin.html">Passwors & Personal info</a></li>
+                <li><a href="signin.html">Email & mail Preference</a></li>
+                <li><a href="homepage.html">Stores & Event</a></li>
+                <li><a href="homepage.html">We're here to help, 24/7</a></li>
+                <li><a href="homepage.html">Contact us</a></li>   
+            </ul>
+        </li>
+        <li>  <a id="carthref" href="/cart.html">Cart</a> </li>
+        </ul>
+
+    </div>
+
+    </div>
+
+
+
+
+
+    <!-- third line = cateogary -->
+    
+    <div id="nav_cat_div">
+
+        <ul id="nav_catog">
+                               
+
+            <li id="select_cat_Sale" onclick="window.location.href='./Html/men.html'" >Sale</li>
+            <li id="select_cat" onclick="window.location.href='./Html/men.html'" >Women</li>
+            <li id="select_cat" onclick="window.location.href='./Html/men.html'">Men</li>
+            <li id="select_cat" onclick="window.location.href='./Html/women.html'">Kids</li>
+            <li id="select_cat" onclick="window.location.href='./Html/men.html'">Young Adult</li>
+            <li id="select_cat" onclick="window.location.href='./Html/women.html'">Active wear</li>
+            <li id="select_cat" onclick="window.location.href='./Html/women.html'">Home</li>
+            <li id="select_cat" onclick="window.location.href='./Html/men.html'">Beauty</li>
+            <li id="select_cat" onclick="window.location.href='./Html/women.html'">Designer</li>
+            <li id="select_cat" onclick="window.location.href='./Html/women.html'">Gifts</li>
+            <li id="select_cat_brand"onclick="window.location.href='./Html/women.html'">Brands</li>
+        </ul>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+<div id="containerPro">
+    <div id="image"> </div>
+    
+    <div id="one">
+        <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnAukns4nmMAPLZEJPzRvtd_lgtuuncN-ypxFOePnw22trJmEUMlPoDJDDOPJUB8RdCnA&usqp=CAU"> -->
+                <h3 id="brand"></h3>
+                <h5 id="brand_2">UGG®</h5> 
+                <h4 id="price"></h4>
+                <span id="line" class="nT1Ys">INR 7,257.29</span>
+                <span id="off">44% off</span>
+
+
+                <p id="para"></p>
+                <p id="para1">This plush backless slipper is supremely warm and cozy thanks to UGGpure, a textile made entirely from wool to feel and wear like genuine shearling.</p>
+
+
+                
+
+                <button id="button1" class="classbut">UGG® size guides</button>
+
+        
+                <div id="two">
+                    <input class="x_input" type="number"placeholder="Size">
+                    <input class="x_input" type="text"placeholder="M(Medium)">
+                </div>
+            
+            
+                <br>
+
+                <div id="five_imgs">
+                    <img class="_3qepa" src="https://n.nordstrommedia.com/id/sr3/e99dc962-b41f-4ee0-84b5-fffcff9a246c.jpeg?crop=fit&amp;w=31&amp;h=31" alt="selected Cream color">
+                    <img class="_3qepa" src="https://n.nordstrommedia.com/id/sr3/43730900-f887-4025-8d75-5c579a75ad58.jpeg?crop=fit&amp;w=31&amp;h=31" alt=" Goat color">
+                    <img class="_3qepa" src="https://n.nordstrommedia.com/id/sr3/9ee79f55-d1c8-49d7-86da-dbccc81af0f9.jpeg?crop=fit&amp;w=31&amp;h=31" alt=" Rock Rose color">
+                    <img class="_3qepa" src="https://n.nordstrommedia.com/id/sr3/e51383bd-e166-406e-80a2-b5805228283c.jpeg?crop=fit&amp;w=31&amp;h=31" alt=" Lava Flow color">
+                    <img class="_3qepa" src="https://n.nordstrommedia.com/id/sr3/6ba66e28-825d-4872-a949-7288dab08b5b.jpeg?crop=fit&amp;w=31&amp;h=31" alt="selected True Navy color">
+                    <img class="_3qepa" src="https://n.nordstrommedia.com/id/sr3/0ff7dbf5-f39c-4d88-b3e1-58a7f74074f9.jpeg?crop=fit&amp;w=31&amp;h=31" alt="selected Pollen color">
+                    
+                </div>
+
+                
+                <h4 id="price">247 People are viewing</h4>
+
+                <button id="button2"> Add To Bag</button>
+    </div>
+</div>
+
+
+
+        
+<div id="footer">
+    <div id="overview">
+
+        <div id="overview_1">
+            <p id="footer_heading">Customer Service</p>
+            
+            <p id="footer_cont">Contact Us</p>
+            <p id="footer_cont">Order</p>
+            <p id="footer_cont">Shipping</p>
+            <p id="footer_cont">Return Policy & Exchanges</p>
+            <p id="footer_cont">Price Adjustments</p>
+            <p id="footer_cont">Gifts</p>
+            <p id="footer_cont">FAQ</p>
+            <p id="footer_cont">Product Recalls</p>
+            <p id="footer_cont">United States</p>
+        </div>
+
+        <div id="overview_1">
+            <p id="footer_heading">About Us</p>
+
+            <p id="footer_cont">Careers</p>
+            <p id="footer_cont">CSR</p>
+            <p id="footer_cont">Diversity, Inclusion & Belonging</p>
+            <p id="footer_cont">Get Email Updates</p>
+            <p id="footer_cont">Nordstorm Blog</p>
+            <p id="footer_cont">Nordy Product</p>
+        </div>
+
+        <div id="overview_1">
+            <p id="footer_heading">Stores & Services</p>
+
+            <p id="footer_cont">Find a Store</p>
+            <p id="footer_cont">Free Style Help</p>
+            <p id="footer_cont">Alterations & Tailoring</p>
+            <p id="footer_cont">Trunk Club</p>
+            <p id="footer_cont">Pop-in-shop</p>
+            <p id="footer_cont">Virtual Events</p>
+            <p id="footer_cont">Spa Nordstorm</p>
+            <p id="footer_cont">Nordstorm Local</p>
+            <p id="footer_cont">Nordstorm Restaurants</p>
+        </div>
+
+        <div id="overview_1">
+            <p id="footer_heading">Nordstorm card & rewards</p>
+
+            <p id="footer_cont">The Nordy Club Rewards</p>
+            <p id="footer_cont">Apply for a Nordstorm Card</p>
+            <p id="footer_cont">Pay My Bill</p>
+            <p id="footer_cont">Manage my Card</p>
+        </div>
+
+        <div id="overview_1">
+            <p id="footer_heading">Nordstorm Inc.</p>
+
+            <p id="footer_cont">Nordstorm Rack</p>
+            <p id="footer_cont">Nordstorm Canada</p>
+            <p id="footer_cont">Trunk club</p>
+            <p id="footer_cont">Investor Relations</p>
+            <p id="footer_cont">Press Releases</p>
+            <p id="footer_cont">Advertise with Us</p>
+        </div>
+
+        <div id="overview_2">
+            <p id="footer_heading">Get Our Apps</p>
+        </div>
+
+    </div>
+
+    <div id="overview_two">
+        <p id="footer_cont">Your Privacy Rights</p>
+        <p id="footer_cont">Do Not Sell My Info</p>
+        <p id="footer_cont">Terms & Conditions</p>
+        <p id="footer_cont">Interest Based-Ads</p>
+        <p id="footer_cont">California Supply Chain Act</p>
+        <p id="footer_cont">2022 Nordstorm, Inc.</p>
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
+<script>
+
+function appendproduct(data){
+    data.forEach(function(elem){
+        let imgdiv = document.querySelector("#image"); //put the id of the div where image is to be appended
+
+        let image = document.createElement("img");
+        image.src = elem.img_url
+        image.setAttribute("id","rate");
+
+
+        imgdiv.append(image);
+
+        let brand = document.getElementById("brand"); //see the brand name and put its id
+        brand.textContent = elem.brand;
+
+        let desc = document.getElementById("para")  //put the id of item description
+        desc.textContent = elem.name;
+
+        let price = document.getElementById("price") //put the id of price 
+        price.textContent = `INR ${elem.price}`;
+
+        let striked = document.getElementById("line") //put the id of the striked price
+        striked.textContent =`INR ${elem.stprice}`;
+
+        let button = document.getElementById("button2")//put the id of the button(add to cart)
+        button.onclick=()=>{
+            localStorage.setItem("CartItems",JSON.stringify(elem));
+        };
+    })
+}
+
+let data = JSON.parse(localStorage.getItem("allTerm"));   //see the name of the local storage put by jayprakash
+
+appendproduct(data);
+</script>
+
+
+
+
+
+   
+   

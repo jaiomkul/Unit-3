@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="width: 30%; margin: auto; margin-top: 100px;">
+    <input type="button" id="btnRandom" value="1to6" onclick="Random();" style="width: 100px; height: 30px;"/>
+    <p id="main" style="text-align: center;"></p>
+</body>
+</html>
+
+<script>
+    function Random()
+{
+
+    var random =  Math.floor(Math.random() * (6) + 1);
+
+        // console.log(random);
+
+        if(random == 6){
+            var num = document.querySelector("#main");
+            num.textContent = random;
+            num.style.backgroundColor = "green";
+
+        }
+        else if(random == 1){
+            var num = document.querySelector("#main");
+            num.textContent = random;
+            num.style.backgroundColor = "yellow";
+        }
+        else{
+            var num = document.querySelector("#main");
+            num.textContent = random;
+            num.style.backgroundColor = "red";
+        }
+}
+</script>

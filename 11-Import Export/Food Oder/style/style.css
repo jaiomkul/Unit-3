@@ -1,0 +1,23 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    height: 70px; 
+    align-items: center;
+    font-size: 20px;
+    background-color: blueviolet;
+    color: wheat;
+}
+a{
+    text-decoration: none;
+    color: wheat;
+}
+
+#data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+  }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <button id="1" class="data" onclick="buttons1()"> Objects</button>
+    <button id="2" class="data" onclick="buttons2()">Arrays</button>
+    <button id="3" class="data" onclick="buttons3()">Functions</button>
+    <button id="4" class="data" onclick="buttons4()">Strings</button>
+    <button id="5" class="data" onclick="buttons5()">Numbers</button>
+    <button id="6" class="data" onclick="buttons6()">null</button>
+    <button id="6" class="data" onclick="buttons7()">undefined</button>
+    <p id="main" style="text-align: center;"></p>
+</body>
+</html>
+<script>
+function buttons1() {
+    var number = document.querySelector("#main");
+    number.innerHTML = "Collection of key value pairs.<br>In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for <br>example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way, <br>JavaScript objects can have properties, which define their characteristics.";
+    number.style.backgroundColor = "green";
+
+}function buttons2() {
+    var number = document.querySelector("#main");
+    number.textContent = "Storing multiple values as a long list.";
+    number.style.backgroundColor = "green";
+
+}
+
+function buttons3() {
+    var number = document.querySelector("#main");
+    number.textContent = "Executes a block of code.";
+    number.style.backgroundColor = "green";
+
+}
+
+function buttons4() {
+    var number = document.querySelector("#main");
+    number.textContent = "As the name suggests, the string is for a sequence of characters, for example, “demo”, “Hi”, etc.";
+    number.style.backgroundColor = "green";
+
+}
+
+function buttons5() {
+    var number = document.querySelector("#main");
+    number.textContent = "Number represents numerical values such as 5, 20, 500, etc.";
+    number.style.backgroundColor = "green";
+
+}
+
+function buttons6() {
+    var number = document.querySelector("#main");
+    number.textContent = "It’s just a special value which represents “nothing”, “empty” or “value unknown”.";
+    number.style.backgroundColor = "green";
+
+}
+
+function buttons7() {
+    var number = document.querySelector("#main");
+    number.textContent = "If a variable is declared, but not assigned, then its value is undefined:";
+    number.style.backgroundColor = "green";
+
+}
+
+
+</script>

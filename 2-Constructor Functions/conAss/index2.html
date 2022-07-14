@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        tr,th,td {
+            border: 1px solid red;
+            padding: 10px 50px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="name">
+        <input type="number" id="num">
+        <input type="text" id="city">
+        <input type="submit" value="AdD">
+    </form>
+<br>
+<br>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- <td>Shubhankar</td>
+                <td>100</td>
+                <td>101</td> -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit",datas);
+    var dataArr = JSON.parse(localStorage.getItem("dataListAll")) || [];
+    creatTable(dataArr)
+    //var dataArr = [];
+    function datas(event) {
+        event.preventDefault();
+        var name = document.querySelector("#name").value;
+        var number = document.querySelector("#num").value;
+        var city = document.querySelector("#city").value;
+
+        var listData = {Sname: name, Snumber: number, Scity: city};
+        dataArr.push(listData);
+
+        // const x= new Constroctor(name,number,city);
+        // dataArr.push(x);
+
+        localStorage.setItem("dataListAll", JSON.stringify(dataArr));
+
+
+        //console.log(dataArr)
+        creatTable(dataArr)
+    }
+
+//     function Constroctor(name,number,city){
+//     this.Sname=name;
+//     this.Snumber=number;
+//     this.Scity=city;
+
+// };
+
+    function creatTable(dataArr){
+
+        document.querySelector("tbody").innerHTML="";
+
+        dataArr.map(function(elem){
+            var tr = document.createElement("tr");
+
+            var td1 = document.createElement("td")
+            td1.textContent=elem.Sname;
+
+            var td2 = document.createElement("td")
+            td2.textContent=elem.Snumber;
+
+            var td3 = document.createElement("td")
+            td3.textContent=elem.Scity;
+
+            tr.append(td1, td2, td3)
+
+            document.querySelector("tbody").append(tr);
+        });
+    }
+</script>

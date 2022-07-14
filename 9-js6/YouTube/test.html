@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         #main {
+            display:inline-grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 100%;
+            grid-gap: 30px;
+            grid-template-areas: 
+               "a a"
+               "a a b b b b b b b b b b"
+            ;
+        }
+
+        #main > div {
+            padding: 30px;
+            font-size: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #main > div:nth-child(1){
+            grid-area: a;
+            background-color: yellow;
+
+        }
+        #main > div:nth-child(2){
+            grid-area: b;
+            background-color: #FF0000;
+        }
+        a{
+            text-decoration: none;
+            margin-bottom: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="nav">Navigation</div>
+        <div>
+            <a href=""><img src="images/menu.png" alt="" style="margin-bottom: 30px;"></a>
+            <br>
+            <a href=""><img src="images/home.png" alt="">Home</a>
+            <br>
+            <a href=""><img src="images/explore.png" alt="">Explore</a>
+            <br>
+            <a href=""><img src="images/subscriprion.png" alt="">Subscriprion</a>
+            <hr>
+            <a href=""><img src="images/library.png" alt="">Library</a>
+            <br>
+            <a href=""><img src="images/history.png" alt="">History </a>
+            <br>
+            <a href=""><img src="images/y.png" alt=""> Your videos</a>
+            <br>
+            <a href=""><img src="images/wt.png" alt="">Watch later</a>
+            <br>
+            <a href=""><img src="images/like.png" alt="">Liked videos</a>
+            <br>
+            <a href=""><img src="images/show-more.png" alt="">Show more</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <form id="brands">
+        <p>MERKER:</p>
+        <input type="radio" id="honda" name="brand" value="honda">
+        <label for="honda">Honda</label><br>
+        <input type="radio" id="toyota" name="brand" value="toyota">
+        <label for="toyota">Toyota</label><br>
+        <input type="radio" id="fiat" name="brand" value="fiat">
+        <label for="fiat">Fiat</label><br>
+    </form>
+    <div id="results"></div>
+<script>
+
+{
+    "car1"  : {"brand" : "fiat", "model_year": 2010, "price" : 33000   },
+    "car2"  : {"brand" : "honda", "model_year": 2015, "price" : 120000   },
+    "car3"  : {"brand" : "toyota", "model_year": 2012, "price" : 200000   },
+    "car4"  : {"brand" : "fiat", "model_year": 2010, "price" : 33000   },
+    "car5"  : {"brand" : "honda", "model_year": 2015, "price" : 120000   }
+
+}
+
+  
+var readTextFile = function(file, callback) {
+    return new Promise( function (resolve, reject) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType("application/json");
+        rawFile.open("GET", file, true);
+         rawFile.onreadystatechange = function() {
+            if (rawFile.readyState === 4 && rawFile.status == "200") {
+                 resolve (callback(rawFile.responseText));
+            }
+        }
+        rawFile.send(null);
+    });
+}
+    var brands = document.forms["brands"].elements["brand"];    
+    var resultsDiv = document.getElementById('results');
+    // Add event listener to each radio button
+    function bind (data) {
+        //console.log(data);
+        for (let brand of brands){
+            brand.addEventListener("click", function (){
+                var resultsDiv = document.getElementById("results");
+                resultsDiv.innerText ='';
+                for (let item in data)
+                {
+                  // console.log( data[item].brand);
+                    
+                    if (brand.getAttribute('id') === data[item].brand)
+                    {
+                        console.log(data[item].model_year);
+                        resultsDiv.innerText += `brand : ${data[item].brand} 
+                                                   model_year: ${data[item].model_year}  
+                                                   price: ${data[item].price}\n`;
+                    }
+                }
+                
+            });
+         
+        }
+        
+    };
+    
+     readTextFile("./cars.json", function(text){
+        var data =   JSON.parse(text);
+      
+        return data;
+        // return self.data;
+         
+    }).then(result => bind(result));
+
+    
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #containerPro{
+            display: flex;
+            /* justify-content: space-between; */
+        }
+
+        #rate{
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+<div id="containerPro">
+    <div id="image"> </div>
+    
+    <div id="one">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnAukns4nmMAPLZEJPzRvtd_lgtuuncN-ypxFOePnw22trJmEUMlPoDJDDOPJUB8RdCnA&usqp=CAU">
+                <h3 id="brand"></h3>
+                <h5  style="padding-bottom: 20px;">UGG®</h5> 
+                <h4 id="price"></h4>
+                <span id="line" class="nT1Ys">INR 7,257.29</span>
+                <span id="off">44% off</span>
+
+
+                <p id="para"></p>
+                <p id="para1">This plush backless slipper is supremely warm and cozy thanks to UGGpure, a textile made entirely from wool to feel and wear like genuine shearling.</p>
+                <input type="number"placeholder="Size">
+
+                <button id="button1" class="classbut">UGG® size guides</button>
+
+
+                <div id="two">
+                            <input type="text"placeholder="M(Medium)">
+                 </div>
+            
+            
+                <br>
+                <img class="_3qepa" src="https://n.nordstrommedia.com/id/sr3/e99dc962-b41f-4ee0-84b5-fffcff9a246c.jpeg?crop=fit&amp;w=31&amp;h=31" alt="selected Cream color">
+                <img class="_3qepa" src="https://n.nordstrommedia.com/id/sr3/43730900-f887-4025-8d75-5c579a75ad58.jpeg?crop=fit&amp;w=31&amp;h=31" alt=" Goat color">
+                <img class="_3qepa" src="https://n.nordstrommedia.com/id/sr3/9ee79f55-d1c8-49d7-86da-dbccc81af0f9.jpeg?crop=fit&amp;w=31&amp;h=31" alt=" Rock Rose color">
+                <img class="_3qepa" src="https://n.nordstrommedia.com/id/sr3/e51383bd-e166-406e-80a2-b5805228283c.jpeg?crop=fit&amp;w=31&amp;h=31" alt=" Lava Flow color">
+                <img class="_3qepa" src="https://n.nordstrommedia.com/id/sr3/6ba66e28-825d-4872-a949-7288dab08b5b.jpeg?crop=fit&amp;w=31&amp;h=31" alt="selected True Navy color">
+                <img class="_3qepa" src="https://n.nordstrommedia.com/id/sr3/0ff7dbf5-f39c-4d88-b3e1-58a7f74074f9.jpeg?crop=fit&amp;w=31&amp;h=31" alt="selected Pollen color">
+                
+                
+                <h4 id="price">247 People are viewing</h4>
+                <button id="button2">Add To Bag</button>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+// brand: "GLOBAL"
+// color: "Beige"
+// discount: 20
+// fabric: "Cotton"
+// img_url: "https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000008957702-White-OffWhite-1000008957702_01-2100.jpg"
+// item: 16701
+// name: "GLOBAL DESI Printed Sleeveless Kurti with Sharara Pants"
+// price: 4299
+// stprice: 5299
+// type: "Kurta_Set"
+
+function appendproduct(data){
+    data.forEach(function(elem){
+        let imgdiv = document.querySelector("#image"); //put the id of the div where image is to be appended
+
+        let image = document.createElement("img");
+        image.src = elem.img_url
+        image.setAttribute("id","rate");
+
+
+        imgdiv.append(image);
+
+        let brand = document.getElementById("brand"); //see the brand name and put its id
+        brand.textContent = elem.brand;
+
+        let desc = document.getElementById("para")  //put the id of item description
+        desc.textContent = elem.name;
+
+        let price = document.getElementById("price") //put the id of price 
+        price.textContent = `INR ${elem.price}`;
+
+        let striked = document.getElementById("line") //put the id of the striked price
+        striked.textContent =`INR ${elem.stprice}`;
+
+        let button = document.getElementById("button2")//put the id of the button(add to cart)
+        button.onclick=()=>{
+            localStorage.setItem("CartItems",JSON.stringify(elem));
+        };
+        
+    })
+}
+
+let data = JSON.parse(localStorage.getItem("allTerm"));   //see the name of the local storage put by jayprakash
+
+appendproduct(data);
+</script>
+
+
+
+
+
+   
+   

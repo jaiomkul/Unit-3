@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../styles/Checkout.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="international_shipping">
+           
+            <p id="international_para">
+                <strong>
+                    Shipping outside of the U.S. or Canada?
+
+                    <a inter_shipnk href="https://www.nordstrom.com/browse/customer-service/international-orders?jid=j011535-13614&cid=00000&cm_sp=merch-_-multi-div_13614_j011535-_-swptcos_corp_persnav_info&#anchor-link-shipping-charges">Learn bout International Shipping</a>
+
+                </strong>
+
+                <button id="img_austria">
+                    <img
+                        id="austria_img"
+                     src="https://n.nordstrommedia.com/alias/AU.gif" alt="">
+
+                    <p>
+                        <strong id="img_austria">Australia</strong>
+                    </p>
+                </button>
+
+            </p>
+
+        </div>
+        
+          <!-- second line nord =  -->
+      <div id="nordstorm_searchbar">
+
+
+        <div id="nordstorm">
+            <a href="home.html">
+                <img 
+                id="nord_img"
+            src="https://n.nordstrommedia.com/alias/nordstrom-logo.svg" alt="">
+            </a>
+        </div>
+    
+        <div id="bar_rightsider">
+           
+            <ul  class="main-menu">
+            <li>Search
+                <ul class="sub-menu">
+                     <input placeholder="Search" id="query">
+                </ul>  
+            </li>
+            <!-- <a href="login.html">Login</a> -->
+                   
+           
+            <li>Sign In
+                <ul class="sub-menu">
+                    <li id="l1"><a href="signin.html">Sign In | Create Account</a></li>
+                    <li><a href="signin.html">Your account</a></li>
+                    <li><a href="">The Nordy Club Reward</a></li>
+                    <li><a href="Checkout.html">Shipping Adresses</a></li>
+                    <li><a href="payment.html">Payment Method</a></li>
+                    <li><a href="women.html">Looks</a></li>
+                    <li><a href="Checkout.html">Pay & Manage Nordstrom Card</a></li>
+                    <li><a href="signin.html">Account Setting</a></li>
+                    <li><a href="signin.html">Passwors & Personal info</a></li>
+                    <li><a href="signin.html">Email & mail Preference</a></li>
+                    <li><a href="homepage.html">Stores & Event</a></li>
+                    <li><a href="homepage.html">We're here to help, 24/7</a></li>
+                    <li><a href="homepage.html">Contact us</a></li>   
+                </ul>
+            </li>
+            <li>  <a href="cart.html">Cart</a> </li>
+            </ul>
+    
+        </div>
+    
+        </div>
+        
+    </div>
+    <div id="ck_container">
+        <div id="ckleft">
+            <div id="cksecure"></div>
+            <div id="ckemail">
+                <p>Delivery</p>
+                <input id="m1" type="text" placeholder="Email" required>
+            </div>
+            <div id="ckname">
+                <input type="text" id="n1" placeholder="First Name" required>
+                <input type="text" id="n2" placeholder="Last Name" required>
+            </div>
+            <div id="ckaddress">
+                <input id="m2" placeholder="Address" required>
+            </div>
+            <div id="ckcode">
+                <input type="text" id="n3" placeholder="Adress 2 (Optional)">
+                <input type="text" id="n4" placeholder="Postal Code" required>
+            </div>
+            <div id="ckcity">
+                <input type="text" id="n5" placeholder="City" required>
+                <input type="text" id="n6" placeholder="Region(Optional)">
+            </div>
+            <div id="ckphone">
+                <input type="text" id="n7" placeholder="Phone" required>
+                <input type="text" id="n8" placeholder="Location" required> 
+            </div>
+            
+            <div id="cksub">
+                <button onclick="adresssaved()">Submit</button>
+                
+            </div>
+            <div id="payments">
+                <p>Payment</p>
+            </div>
+            <div id="card">
+                <div id="sameadd">
+                    <input type="checkbox" id="tick" >
+                    <p>My Billing Address is the same as my delivery address</p>
+                </div>
+                <div id="selectcard">
+                    <input type="radio" id="radio" required>
+                    <p>Credit or Debit Card</p>
+                </div>
+                <input type="number" id="cardnumber" placeholder="Card Number">
+                <div id="carddate">
+                    <input type="text" placeholder="MM/YY" required id="datecard">
+                    <input type="number" placeholder="CVV" required id="cvv">
+                </div>
+                <hr>
+                <div id="pay">
+                    <button onclick="place()">Place order</button>
+                    <p>This order total is 100% guarnteed. There will be no additional charges due upon receipt.</p>
+                </div>
+
+            </div>
+        </div>
+        <div id="ckright">
+            <p id="yourorder">Your Order</p>
+            <div id="continue">
+                <p>Continue</p>
+
+            </div>
+            <div id="itemshow">
+                <p>Items</p>
+                <p id="totalshow"></p>
+            </div>
+            <div id="shipping">
+                <p>Shipping</p>
+                <p>$ 0</p>
+            </div>
+            <div id="duties">
+                <p>Duties</p>
+                <p>$ 0</p>
+            </div>
+            <div id="taxes">
+                <p>Taxes</p>
+                <p>$ 0</p>
+            </div>
+            <div id="finaltotal">
+                <p>Total</p>
+                <p id="totalp"></p>
+            </div>
+            <div id="promodiv">
+                <div id="procode">
+                    <p style="text-align: left; margin-left: 10px;">+ Promo Code</p>
+                </div>
+                <div id="applypromo">
+                    <input type="text" id="promotag">
+                    <button onclick="promo()" id="promobutton">Apply</button>
+                </div>
+                <div id="cartappend">
+                    <h4>Cart Items</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="ck_footer">
+        <div id="footer">
+            <div id="overview">
+        
+                <div id="overview_1">
+                    <p id="footer_heading">Customer Service</p>
+                    
+                    <p id="footer_cont">Contact Us</p>
+                    <p id="footer_cont">Order</p>
+                    <p id="footer_cont">Shipping</p>
+                    <p id="footer_cont">Return Policy & Exchanges</p>
+                    <p id="footer_cont">Price Adjustments</p>
+                    <p id="footer_cont">Gifts</p>
+                    <p id="footer_cont">FAQ</p>
+                    <p id="footer_cont">Product Recalls</p>
+                    <p id="footer_cont">United States</p>
+                </div>
+        
+                <div id="overview_1">
+                    <p id="footer_heading">About Us</p>
+        
+                    <p id="footer_cont">Careers</p>
+                    <p id="footer_cont">CSR</p>
+                    <p id="footer_cont">Diversity, Inclusion & Belonging</p>
+                    <p id="footer_cont">Get Email Updates</p>
+                    <p id="footer_cont">Nordstorm Blog</p>
+                    <p id="footer_cont">Nordy Product</p>
+                </div>
+        
+                <div id="overview_1">
+                    <p id="footer_heading">Stores & Services</p>
+        
+                    <p id="footer_cont">Find a Store</p>
+                    <p id="footer_cont">Free Style Help</p>
+                    <p id="footer_cont">Alterations & Tailoring</p>
+                    <p id="footer_cont">Trunk Club</p>
+                    <p id="footer_cont">Pop-in-shop</p>
+                    <p id="footer_cont">Virtual Events</p>
+                    <p id="footer_cont">Spa Nordstorm</p>
+                    <p id="footer_cont">Nordstorm Local</p>
+                    <p id="footer_cont">Nordstorm Restaurants</p>
+                </div>
+        
+                <div id="overview_1">
+                    <p id="footer_heading">Nordstorm card & rewards</p>
+        
+                    <p id="footer_cont">The Nordy Club Rewards</p>
+                    <p id="footer_cont">Apply for a Nordstorm Card</p>
+                    <p id="footer_cont">Pay My Bill</p>
+                    <p id="footer_cont">Manage my Card</p>
+                </div>
+        
+                <div id="overview_1">
+                    <p id="footer_heading">Nordstorm Inc.</p>
+        
+                    <p id="footer_cont">Nordstorm Rack</p>
+                    <p id="footer_cont">Nordstorm Canada</p>
+                    <p id="footer_cont">Trunk club</p>
+                    <p id="footer_cont">Investor Relations</p>
+                    <p id="footer_cont">Press Releases</p>
+                    <p id="footer_cont">Advertise with Us</p>
+                </div>
+        
+                <div id="overview_2">
+                    <p id="footer_heading">Get Our Apps</p>
+                </div>
+        
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+<script src="./scripts/Checkout.js">
+
+
+</script>
+</html>

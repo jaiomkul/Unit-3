@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="" id="slider">
+</body>
+</html>
+
+<script>
+    //var x;
+
+let images_arr = ["https://www.townandcountrymag.com/leisure/arts-and-culture/g3133/best-summer-movies/","https://image.shutterstock.com/image-vector/online-cinema-art-movie-watching-260nw-700366096.jpg","https://www.cnet.com/a/img/E-FVmLn16iYLCcnb4RvGDVNokXs=/940x528/2020/07/09/ccbe4c91-404b-4811-be6f-c5b48c9db9dc/vudu-free-movies-july-2020.jpg","https://assets1.ignimgs.com/2019/02/26/starwarsmovies-blogroll-1551142053134_160w.jpg?width=775&crop=16%3A9","https://thevideoink.com/wp-content/uploads/2020/09/netflix-1.jpg"]
+
+
+function start(images_arr) {
+    //let images_arr = JSON.parse(localStorage.getItem('images'))
+
+    let slider_img = document.getElementById("slider")
+
+    let i=0
+
+    let x = setInterval(function (){
+
+        if(i===images_arr.length)
+        {
+            i=0
+        }
+        slider_img.src = images_arr[i]
+        i = i+1;
+        console.log('i', i)
+    }, 1500)
+
+}
+start(images_arr)
+</script>

@@ -1,0 +1,201 @@
+
+        #navbar{
+            width: 100%;
+            
+        }
+        #navbar *{
+            font-family: Brandon Text,Arial,sans-serif;
+        }
+
+        #international_shipping{
+            width: 100%;
+            background-color: black;
+            height: 5%;
+            text-align: center;
+        }
+        #international_para *{
+            font-family: Brandon Text,Arial,sans-serif;
+            color: #fff;
+            cursor: pointer;
+            line-height: 3em;
+            position: relative;
+            
+
+        }
+        #img_austria, #austria_img{
+            background-color: black;
+            display: flex;
+            float: right;
+            border:0;
+            line-height: 1.5em;
+            position: relative;
+            align-items: center;
+
+        }
+        #img_austria{
+            padding:0px 15px;
+            padding-top:  3px;
+            font-size:11px
+        }
+
+        #bar_rightsider{
+            cursor: pointer;
+            display:flex;
+            /* border: 1px solid black; */
+        }
+        #bar_rightsider > div{
+            margin-right: 40px;
+        }
+        /* #cart_img{
+            width: 5%;
+            padding: 0px;
+        } */
+
+        #nav_cat_div{
+            width: 100%;
+            /* border: 2px solid black; */
+        }
+        #nav_catog{
+            justify-content: space-between;
+            list-style: none;
+            display:flex; 
+            line-height:1.5;
+        }
+        #select_cat{
+            /* padding: 0px 55px; */
+            color:#393939; 
+            cursor: pointer;
+        }
+        #select_cat_Sale{
+            margin-left: -10px;
+            cursor: pointer;
+            color:red;
+        }
+        #select_cat_brand{
+            margin-right: 40px;
+            cursor: pointer;
+        }
+        /* hover - stgyles -------------------------------*/
+        #select_cat_Sale:hover{
+            border-bottom: 2px solid red;
+        }
+        #select_cat_brand:hover{
+            border-bottom: 2px solid black;
+        }
+        #select_cat:hover{
+            border-bottom: 2px solid black;
+        }
+
+        #query{
+            border: 0px;
+            font-family: Brandon Text,Arial,sans-serif;
+            font-size: medium;
+            width: 100%;
+            margin-left: -25px;
+            margin-top: -35px;  
+            padding-top: 5px; 
+            
+        }
+      
+
+      #bar_rightsider >a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+
+        #bar_rightsider{
+            /* border: 1px solid red; */
+            text-align: center;
+            width: 60%;
+           margin-top: -15px;
+            align-content: center;
+          
+
+        }
+
+        .main-menu li{
+            display: inline-block;
+            padding: 10px 0px;
+            width: 180px;
+           
+            font-family:  Brandon Text,Arial,sans-serif;
+            transition: 1s; 
+            /* border: 1px solid green;  */
+            cursor: pointer;
+            
+        }
+
+        .sub-menu{
+            display: none;
+            /* list-style-type: none; */
+            position: absolute;
+            border: 1px solid gainsboro;
+            margin-top: 5px;
+            margin-left: -20px;
+            box-shadow: 1px 1px 1px grey ;
+            text-align: left;
+            width: 220px;
+            padding-top: 15px;
+            z-index: 1;
+            background-color: white;
+            text-decoration: none; 
+            color: white;
+         
+
+            
+        }
+
+        /* .sub-menu:before{
+            content : "";
+            width: 0px;
+            height: 0px;
+            border-left: 15px solid pink;
+            border-right: 15px solid pink;
+            border-bottom: 30px solid pink;
+            position: absolute;
+            
+        } */
+
+        .sub-menu >li{
+            padding: 10px;
+            font-family:  Brandon Text,Arial,sans-serif;
+          
+        }
+
+        .main-menu li:hover, .sub-menu li:hover{
+            background: rgb(235, 235, 235);
+        }
+        .main-menu li:hover .sub-menu{
+            display: block;
+        }
+
+        #nord_img{
+            width: 30%;
+        }
+        #nordstorm{
+            margin-left: 25px;
+            /* border: 2px solid black; */
+            width: 60%;   
+        }
+        #nordstorm_searchbar{
+            display: flex;
+            height: 50px;
+        }
+
+        #l1{
+            background-color: black;
+            color: white;
+        }
+
+
+        #carthref{
+            /* text-decoration: none; */
+            color: black;
+        }
+
+        .sub-menu > *{
+            /* text-decoration: none; */
+            color: black;
+        }

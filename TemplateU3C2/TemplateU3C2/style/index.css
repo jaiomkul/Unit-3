@@ -1,0 +1,29 @@
+
+.navMy {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 5em;
+    margin: auto;
+
+    
+
+}
+
+
+#menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    margin: auto;
+    
+}
+
+#menu div {
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#menu img {
+    width: 350px;
+    height: 300px;
+}

@@ -1,0 +1,53 @@
+body{
+    background-image: url("https://c.tenor.com/e1AE3gYd1KoAAAAC/weather-weather-forecast.gif");
+    background-color: #cccccc;
+    background-size: cover;
+    width: 100%;
+    margin: auto;
+}
+
+#container{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width:80%;
+}
+.divId2{
+    width: 500px;
+    margin-left: 300px;
+    text-align: center;
+
+}
+/* .divId2 > img{
+    
+    margin-left: 500px;
+} */
+h3, h4 {
+    color: white;
+}
+#ok{
+    width: 800px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+        }
+    input[type=text] {
+        width: 530px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+    }
+    button {
+        width: 130px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        background-color: aqua;
+    }
+    #no-movie {
+        width: 200px;
+    }

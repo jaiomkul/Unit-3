@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="city">
+    <button onclick="getWt()">Select</button>
+</body>
+</html>
+
+<script>
+    let key = '229f80e454a0317e95b55bb2c756a1d6';
+    async function getWT(){
+        try {
+            let city = document.getElementById("city").value;
+
+            let data = await fetch('https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}')
+
+            let data await res.json();
+
+            showWt(data);
+        } catch (err) {
+            console.log("err:", err)
+        }
+    }
+
+
+    function showWt(d){
+        console.log("d:", d)
+        main.innerHtml= null;
+
+        let name = document.createElement("p")
+        name.innerHTML = Temp - ${d,main.}
+    }
+</script>
